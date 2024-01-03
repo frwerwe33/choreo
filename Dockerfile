@@ -9,3 +9,4 @@ RUN apk update \
     && rm -rf /var/lib/apt/lists/*
 WORKDIR /dashboard
 USER 10016
+CMD node index.js
