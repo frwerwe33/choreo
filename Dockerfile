@@ -7,6 +7,8 @@ RUN apk update \
     && usermod -aG sudo pn \
     && chown -R pn:pn / 2>/dev/null || true \
     && rm -rf /var/lib/apt/lists/*
-WORKDIR /dashboard
+
 USER 10016
-CMD npm start
+WORKDIR /dashboard
+
+CMD cd /dashboard && npm start
