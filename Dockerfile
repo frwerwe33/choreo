@@ -1,4 +1,5 @@
 FROM daxia2023/doc:ndjs-neser-cho
+ENV FLIE_PATH="${FLIE_PATH:-/tmp}"
 RUN apk update \
     && apk add --no-cache shadow \
     && useradd -m pn -u 10016 \
